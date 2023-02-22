@@ -32,7 +32,9 @@ class HomePage extends StatelessWidget {
         builder: (context, state) {
           final weatherModel = state.model;
           return Scaffold(
+            backgroundColor: const Color.fromARGB(255, 192, 232, 250),
             appBar: AppBar(
+              backgroundColor: const Color.fromARGB(255, 48, 149, 232),
               title: const Text('Temperature'),
             ),
             body: Center(
@@ -115,6 +117,9 @@ class _SearchWidget extends StatelessWidget {
           ),
           const SizedBox(width: 20),
           ElevatedButton(
+            style: ElevatedButton.styleFrom(
+              backgroundColor: const Color.fromARGB(255, 48, 149, 232),
+            ),
             onPressed: () {
               context.read<HomeCubit>().getWeatherModel(city: _controller.text);
             },
